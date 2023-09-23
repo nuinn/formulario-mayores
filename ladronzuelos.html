@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Denuncia</title>
+</head>
+<body>
+    <h1>Formulario de Denuncia</h1>
+    <form>
+        <fieldset>
+            <legend>Fecha y Hora de Incidencia:</legend>
+            <input type="date" name="fecha" required>
+            <input type="time" name="time" required>
+        </fieldset>
+        <br/>
+        <fieldset>
+            <legend>Descripcíon de la Bicicleta:</legend>
+            <label for="color">Color:</label>
+            <input type="color" id="color" name="color" required>
+            <span>&nbsp;&nbsp;</span>
+            <label for="precio">Valor Estimado:</label>
+            <input type="range" id="precio" name="precio" min="0" max="1000" step="50" oninput="this.nextElementSibling.value = this.value">
+            <output></output><span>€</span>
+            <br/><br/>
+            <label for="tipo">Tipo de Bicicleta:</label>
+            <select id="tipo">
+                <optgroup label="Paseo">
+                    <option name="tipo" id="señorial">Señorial</option>
+                    <option name="tipo" id="antiplebeyos">Anti-Plebeyos</option>
+                    <option name="tipo" id="porencimadelhombro">PorEncimaDelHombro</option>
+                </optgroup>
+                <optgroup label="Montaña">
+                    <option name="tipo" id="gamusinos">Gamusinos</option>
+                    <option name="tipo" id="hueleflores">Hueleflores Premium</option>
+                    <option name="tipo" id="fangolover">Fango Lover</option>
+                </optgroup>
+                <optgroup label="Carreras">
+                    <option name="tipo" id="metroymedio">MetroyMedio</option>
+                    <option name="tipo" id="3delatarde">3 de la Tarde (flourescente edición)</option>
+                    <option name="tipo" id="gruitors">Grupitors</option>
+                </optgroup>
+            </select>
+            
+        </fieldset>
+    </form>
+</body>
+</html>
