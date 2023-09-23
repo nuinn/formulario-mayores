@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Admisión</title>
+</head>
+<body>
+    <h1>Formulario de Admisión</h1>
+    <form>
+        <fieldset>
+            <legend>TUS DATOS</legend>
+            <span><em>Los campos obligatorios están marcados con asterisco <b>*</b></em></span>
+            <br/><br/>
+            <label for="nombre">Nombre*:</label>
+            <input type="text" id="nombre" name="nombre" required autofocus>
+            <br/>
+            <label for ="primapellido">Primer Apellido*:</label>
+            <input type="text" id="primapellido" name="primapellido" required>
+            <label for ="segapellido">Segundo Apellido:</label>
+            <input type="text" id="segapellido" name="segapellido" tabindex="-1">
+            <br/><br/>
+            <label for="edad">Edad*:</label>
+            <input type="number" id="edad" name="edad" value="60" required>
+            <br/><br/>
+            <span>Sexo:</span>
+            <br/>
+            <input type="radio" id="hombre" name="sexo" value="hombre">
+            <label for="hombre">Hombre</label>
+            <br/>
+            <input type="radio" id="mujer" name="sexo" value="mujer">
+            <label for="mujer">Mujer</label>
+            <br/><br/>
+            <span>¿Te sientes viejuner?*</span>
+            <br/>
+            <input type="checkbox" id="viejuner" name="viejuner" required>
+            <label for="viejuner">¡Sí!</label>
+            <br/><br/>
+            <span>Dinos algo sobre ti:</span>
+            <br/>
+            <textarea name="sobreti" cols="65" rows="5" tabindex="-1"></textarea>
+        </fieldset>
+        <br/>
+        <fieldset>
+            <legend>CONTACTO</legend>
+            
+            <label for="email">Correo electrónico*:</label>
+            <input type="email" id="email" name="email" placeholder="nombre@ejemplo.com" required>
+            <br/><br/>
+            <label for="tel">Número de Teléfono*:</label>
+            <input type="tel" id="tel" name="teléfono" placeholder="678901234" pattern="[0-9]{9}" required>
+            <br/>
+            <small><em>El número de teléfono debe constar de 9 dígitos</em></small>
+        </fieldset>
+        <br/>
+        <input type="submit">
+        
+        <input type="reset">
+    </form>
+</body>
+</html>
