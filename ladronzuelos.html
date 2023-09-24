@@ -9,18 +9,18 @@
     <h1>Formulario Denuncia de Robo</h1>
     <form>
         <fieldset>
-            <legend>Fecha y Hora de Incidencia:</legend>
+            <legend><b>Fecha y Hora de Incidencia:</b></legend>
             <input type="date" name="fecha" required>
             <input type="time" name="time" required>
         </fieldset>
         <br/>
         <fieldset>
-            <legend>Descripcíon de la Bicicleta:</legend>
+            <legend><b>Descripcíon de la Bicicleta:</b></legend>
             <label for="color">Color:</label>
             <input type="color" id="color" name="color" required>
             <span>&nbsp;&nbsp;</span>
             <label for="precio">Valor Estimado:</label>
-            <input type="range" id="precio" name="precio" min="0" max="1000" step="50" oninput="this.nextElementSibling.value = this.value">
+            <input type="range" id="precio" name="precio" value="0" min="0" max="1000" step="50" oninput="this.nextElementSibling.value = this.value">
             <output></output><span>€</span>
             <br/><br/>
             <label for="tipo">Tipo de Bicicleta:</label>
@@ -67,7 +67,32 @@
               <option value="Cervélo"></option>
               <option value="Argon"></option>
             </datalist>
+            <br/>
         </fieldset>
+        <br/>
+        <fieldset>
+            <legend><b>Accesorios:</b></legend>
+            <span>Por favor, marque los accesorios que tenía la bicicleta:</span>
+            <br/><br/>
+            <select id="accesorios" name="accesorios" multiple size="6">
+                <option value="ruedines">Ruedines</option>
+                <option value="pegatinas">Pegatinas</option>
+                <option value="cesta">Cestita</option>
+                <option value="bomba">Bomba de Aire</option>
+                <option value="timbre">Timbre</option>
+                <option value="foco">Foco</option>
+            </select>
+            <br/><br/>
+            <span><em>Puede seleccionar varias opciones haciendo clic mientras presiona:</em></span>
+            <br/>
+            <span>—<b>"Ctrl"</b> (Windows)</span>
+            <br/>
+            <span>—<b>"cmd"</b> (Mac).</em></pre></span>
+        </fieldset>
+        <br/>
+        <input type="submit">
+        
+        <input type="reset">
     </form>
 </body>
 </html>
